@@ -1,6 +1,7 @@
 'use strict'
 
 const { VueLoaderPlugin } = require('vue-loader');
+const { path } = require('path');
 
 module.exports = {
     mode: 'development',
@@ -14,5 +15,8 @@ module.exports = {
                 use: 'vue-loader'
             }
         ]
-    }
+    },
+    plugins: [
+        new VueLoaderPlugin()
+    ]
 }
